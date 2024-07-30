@@ -1,30 +1,50 @@
-# React + TypeScript + Vite
+# Ignite Life Bowen Therapy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the reactive frontend for Ignite Life Bowen Therapy. Developed with Next.js and soon to be integrated with a Laravel backend, this project aims to create a responsive and intuitive user interface for a booking system. The admin panel is meticulously designed to prioritize simplicity and ease of use.
 
-Currently, two official plugins are available:
+### Backend Repository
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The backend code is available at: [Ignite Life Backend](https://github.com/callan321/ignite-life-backend)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+First, install the dependencies:
 
-- Configure the top-level `parserOptions` property like this:
+```bash
+npm install
+```
+then, run the development server:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+## Requirements
+
+### Home Page
+- [ ]  Add a hero section
+- [ ]  Dynamic Routes on NavBar
+
+### Admin Panel
+- [ ] List view for users, name, email, phone number
+- [ ] Sync With Backend
+- [ ] Add user
+- [ ] Edit User
+- [ ] Delete user
+- [ ] Pagination
+- [ ] Search for user
+- [ ] Link user information (additional table)
+- [ ] Add a view to users appointments
+- [ ] Add appointments
+- [ ] Edit appointments
+- [ ] Delete appointments
+
+
+### Calender view
+- [ ] weekly view
+- [ ] Appointment details including user
+- [ ] Sync with backend
+- [ ] Link to user profile when clicked
