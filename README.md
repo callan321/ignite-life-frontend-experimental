@@ -26,11 +26,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Home Page
 - [ ]  Add a hero section
-- [ ]  Dynamic Routes on NavBar
+- [x]  Layout and Page with Navbar
 
 ### Admin Panel
-- [ ] List view for users, name, email, phone number
-- [ ] Sync With Backend
+- [x] List view for users, name, email, phone number
+- [x] Sync With Backend
 - [ ] Add user
 - [ ] Edit User
 - [ ] Delete user
