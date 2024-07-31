@@ -3,7 +3,7 @@ import {Outlet} from "react-router-dom";
 
 export default function MainLayout() {
     const NavBarProps = [
-        {name: 'Home', link: '/'},
+        {name: 'Home', link: '/home'},
         {name: 'Admin', link: '/admin'},
     ]
     return (

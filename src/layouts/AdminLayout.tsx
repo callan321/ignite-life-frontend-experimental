@@ -3,6 +3,7 @@ import {Outlet} from "react-router-dom";
 
 export default function AdminLayout() {
     const NavBarProps = [
+        {name: 'Home', link: '/'},
         {name: 'Dashboard', link: '/admin/dashboard'},
         {name: 'Bookings', link: '/admin/bookings'},
         {name: 'Users', link: '/admin/users'},

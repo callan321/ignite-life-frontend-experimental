@@ -10,7 +10,6 @@ export default function AdminUsers() {
     })
 
 
-
     return (
         <div className=" flex justify-center">
             <div className="w-[48rem] py-8">
@@ -18,7 +17,8 @@ export default function AdminUsers() {
                     <div className="sm:flex-auto">
                         <h1 className="text-base font-semibold leading-6 text-gray-900">Users</h1>
                         <p className="mt-2 text-sm text-gray-700">
-                            A list of all the users in your account including their name, Phone Number, email and role.
+                            A list of all the users in your account including their name, Phone Number, email and role
+                            is a placeholder. If the backend is not deployed yet you will see nothing on the table.`
                         </p>
                     </div>
                     <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
