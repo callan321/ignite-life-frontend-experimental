@@ -1,4 +1,4 @@
-import Test from "./Test.tsx";
+import AddUser from "./AddUser.tsx";
 
 type UserTableProps = {
     items: {
@@ -23,7 +23,7 @@ export default function UserTable({items}: UserTableProps) {
                     </p>
                 </div>
                 <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-                    <Test/>
+                    <AddUser/>
                 </div>
             </div>
             <div className="-mx-4 mt-8 sm:-mx-0">
