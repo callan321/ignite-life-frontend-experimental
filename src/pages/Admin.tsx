@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import UserTable from "../components/UserTable.tsx";
+import UserTable from "../components/admin/UserTable.tsx";
 
 
 export default function Admin() {
@@ -7,6 +7,7 @@ export default function Admin() {
     useEffect(() => {
         fetch("http://ignite-life-backend.test/api/users").then(res => res.json()).then(users => setUsers(users));
     })
+
 
     return (
         <div className=" flex justify-center">
