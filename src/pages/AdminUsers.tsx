@@ -3,7 +3,7 @@ import UserTable from "../components/admin/UserTable.tsx";
 import AddUser from "../components/admin/AddUser.tsx";
 
 
-export default function Admin() {
+export default function AdminUsers() {
     const [users, setUsers] = useState([]);
     useEffect(() => {
         fetch("http://ignite-life-backend.test/api/users").then(res => res.json()).then(users => setUsers(users));

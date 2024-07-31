@@ -1,7 +1,11 @@
 import {Route, Routes} from "react-router-dom";
 import Home from "./pages/Home.tsx";
-import Admin from "./pages/Admin.tsx";
+
 import MainLayout from "./layouts/MainLayout.tsx";
+import AdminLayout from "./layouts/AdminLayout.tsx";
+import AdminUsers from "./pages/AdminUsers.tsx";
+import AdminDashboard from "./pages/AdminDashboard.tsx";
+import AdminBookings from "./pages/AdminBookings.tsx";
 
 
 export default function App() {
@@ -9,8 +13,13 @@ export default function App() {
         <Routes>
             <Route path="/" element={<MainLayout/>}>
                 <Route index element={<Home/>}/>
-                <Route path="/admin" element={<Admin/>}/>
+
             </ Route>
+            <Route path="/admin" element={<AdminLayout />}>
+                <Route path="dashboard" element={<AdminDashboard />} />
+                <Route path="bookings" element={<AdminBookings />} />
+                <Route path="users" element={<AdminUsers />} />
+            </Route>
         </Routes>
     )
 }
