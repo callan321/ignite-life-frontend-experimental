@@ -5,9 +5,14 @@ import AdminLayout from "./layouts/AdminLayout.tsx";
 import AdminUsers from "./pages/AdminUsers.tsx";
 import AdminDashboard from "./pages/AdminDashboard.tsx";
 import AdminBookings from "./pages/AdminBookings.tsx";
+import {useEffect} from "react";
 
 
 export default function App() {
+    useEffect(() => {
+        document.title = "Ignite Life - Bowen Therapy";
+    }, []);
+
     return (
         <Routes>
             <Route path="/" element={<MainLayout/>}>
