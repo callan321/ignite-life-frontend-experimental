@@ -1,17 +1,15 @@
-type UserTableProps = {
-    items: {
-        name: string;
-        email: string
-        phone_number: string
-        id: number
-    }[];
+type User = {
+    id: number;
+    name: string;
+    phone_number: string;
+    email: string;
 };
 
+type UserTableProps = {
+    items: User[];
+};
 export default function UserTable({items}: UserTableProps) {
-
-
     return (
-
         <div className="-mx-4 mt-8 sm:-mx-0">
             <table className="min-w-full divide-y divide-gray-300">
                 <thead>
