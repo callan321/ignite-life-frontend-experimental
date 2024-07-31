@@ -1,5 +1,3 @@
-import AddUser from "./AddUser.tsx";
-
 type UserTableProps = {
     items: {
         name: string;
@@ -14,18 +12,6 @@ export default function UserTable({items}: UserTableProps) {
 
     return (
         <div className="px-4 sm:px-6 lg:px-8">
-
-            <div className="sm:flex sm:items-center">
-                <div className="sm:flex-auto">
-                    <h1 className="text-base font-semibold leading-6 text-gray-900">Users</h1>
-                    <p className="mt-2 text-sm text-gray-700">
-                        A list of all the users in your account including their name, Phone Number, email and role.
-                    </p>
-                </div>
-                <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-                    <AddUser/>
-                </div>
-            </div>
             <div className="-mx-4 mt-8 sm:-mx-0">
                 <table className="min-w-full divide-y divide-gray-300">
                     <thead>

@@ -1,9 +1,28 @@
 import {useState} from 'react'
 import {Dialog, DialogBackdrop, DialogPanel} from '@headlessui/react'
 import AdminButton from "./AdminButton.tsx";
+import react from "@vitejs/plugin-react";
+
+interface FormData  {
+    name: string;
+    phoneNumber: string;
+    email: string;
+}
 
 export default function AddUser() {
     const [open, setOpen] = useState(false) // Initialize to false to prevent default rendering
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        const res = await fetch('http://ignite-life-backend.test/api/users', {
+            method: 'POST',
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify({formData})
+        })
+        const result = await res.json();
+        console.log(result); // Handle the response as needed
+        setOpen(false);
+    }
 
     return (
         <div>
@@ -78,8 +97,11 @@ export default function AddUser() {
                                         </div>
                                     </div>
                                     <div className="sm:col-span-6 flex justify-between ">
-                                        <AdminButton name="Cancel" onClick={() => setOpen(false)} style="bg-red-600 hover:bg-red-500"/>
-                                        <AdminButton name="Create" onClick={() => setOpen(false)}/>
+                                        <AdminButton name="Cancel" onClick={() => setOpen(false)}
+                                                     style="bg-red-600 hover:bg-red-500"/>
+                                        <button type='submit'>
+                                            <AdminButton name="Create"/>
+                                        </button>
                                     </div>
                                 </div>
                             </form>
