@@ -13,12 +13,12 @@ The backend code is available at: [https://github.com/callan321/ignite-life-back
 ## Requirements
 
 ### Main Page
-- [x]  Layout and Page with Navbar
+- [x]  Layout with Navbar
 
 ### Admin 
 
 #### Dashboard
-- [ ] Links to socials 
+- [x] Links to socials 
 
 #### User 
 - [x] List view for users, name, email, phone number
