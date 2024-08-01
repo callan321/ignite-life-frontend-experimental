@@ -1,14 +1,11 @@
-type User = {
-    id: number;
-    name: string;
-    phone_number: string;
-    email: string;
-};
+import UserTableRow from "./UserTableRow.tsx";
+import {User} from "../../models/types.ts";
 
 type UserTableProps = {
-    items: User[];
+    users: User[];
 };
-export default function UserTable({items}: UserTableProps) {
+
+export default function UserTable({users} : UserTableProps) {
     return (
         <div className="-mx-4 mt-8 sm:-mx-0">
             <table className="min-w-full divide-y divide-gray-300">
@@ -39,30 +36,18 @@ export default function UserTable({items}: UserTableProps) {
                 </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 bg-white">
-                {items.map((user) => (
-                    <tr key={user.email}>
-                        <td className="w-full max-w-0 py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:w-auto sm:max-w-none sm:pl-0">
-                            {user.name}
-                            <dl className="font-normal lg:hidden">
-                                <dt className="sr-only">Phone Number</dt>
-                                <dd className="mt-1 truncate text-gray-700">{user.phone_number}</dd>
-                                <dt className="sr-only sm:hidden">Email</dt>
-                                <dd className="mt-1 truncate text-gray-500 sm:hidden">{user.email}</dd>
-                            </dl>
-                        </td>
-                        <td className="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell">{user.phone_number}</td>
-                        <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{user.email}</td>
-                        <td className="px-3 py-4 text-sm text-gray-500">{user.id}</td>
-                        <td className="py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
-                            <a href="#" className="text-indigo-600 hover:text-indigo-900">
-                                Edit<span className="sr-only">, {user.name}</span>
-                            </a>
-                        </td>
-                    </tr>
+                {users.map((user) => (
+                    <UserTableRow
+                        key={user.email}
+                        id={user.id}
+                        name={user.name}
+                        phone_number={user.phone_number}
+                        email={user.email}
+                        editHref={`/admin/users/edit/${user.id}`}
+                    />
                 ))}
                 </tbody>
             </table>
         </div>
-
     )
 }

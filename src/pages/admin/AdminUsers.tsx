@@ -1,14 +1,8 @@
 import {useEffect, useState} from "react";
-import UserTable from "../components/admin/UserTable.tsx";
-import AddUser from "../components/admin/AddUser.tsx";
+import UserTable from "../../components/admin/UserTable.tsx";
+import AddUser from "../../components/admin/AddUser.tsx";
 import axios from "axios";
-
-type User = {
-    id: number;
-    name: string;
-    phone_number: string;
-    email: string;
-};
+import {User} from "../../models/types.ts";
 
 const backupUsers : User[] = [
     { id: 1, name: 'John Doe', phone_number: '123-456-7890', email: 'john.doe@example.com' },
@@ -20,7 +14,7 @@ export default function AdminUsers() {
     const [users, setUsers] = useState<User[]>([]);
 
     useEffect(() => {
-        axios.get("http://ignite-life-backend.test/api/userss")
+        axios.get("http://ignite-life-backend.test/api/users")
             .then(response => setUsers(response.data))
             .catch(error => {
                 console.log(error);
@@ -44,7 +38,7 @@ export default function AdminUsers() {
                         <AddUser/>
                     </div>
                 </div>
-                <UserTable items={users}/>
+                    <UserTable users={ users }/>
             </div>
         </div>
 

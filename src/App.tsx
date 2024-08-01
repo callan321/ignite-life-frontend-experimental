@@ -2,9 +2,10 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import Home from "./pages/Home.tsx";
 import MainLayout from "./layouts/MainLayout.tsx";
 import AdminLayout from "./layouts/AdminLayout.tsx";
-import AdminUsers from "./pages/AdminUsers.tsx";
-import AdminDashboard from "./pages/AdminDashboard.tsx";
-import AdminBookings from "./pages/AdminBookings.tsx";
+import AdminUsers from "./pages/admin/AdminUsers.tsx";
+import AdminDashboard from "./pages/admin/AdminDashboard.tsx";
+import AdminBookings from "./pages/admin/AdminBookings.tsx";
+import EditUser from "./pages/admin/EditUser.tsx";
 import {useEffect} from "react";
 
 
@@ -25,6 +26,7 @@ export default function App() {
                 <Route path="dashboard" element={<AdminDashboard />} />
                 <Route path="bookings" element={<AdminBookings />} />
                 <Route path="users" element={<AdminUsers />} />
+                <Route path="users/edit/:id" element={<EditUser />} />
             </Route>
         </Routes>
     )
