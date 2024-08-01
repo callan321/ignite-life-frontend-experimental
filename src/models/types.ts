@@ -3,4 +3,5 @@ export type User = {
     name: string;
     phone_number: string;
     email: string;
+    subscribed : boolean;
 };

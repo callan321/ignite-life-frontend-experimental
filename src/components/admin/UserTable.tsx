@@ -28,7 +28,7 @@ export default function UserTable({users} : UserTableProps) {
                         Email
                     </th>
                     <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                        Role
+                        Subscribed
                     </th>
                     <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-0">
                         <span className="sr-only">Edit</span>
@@ -43,6 +43,7 @@ export default function UserTable({users} : UserTableProps) {
                         name={user.name}
                         phone_number={user.phone_number}
                         email={user.email}
+                        subscribed={user.subscribed}
                         editHref={`/admin/users/edit/${user.id}`}
                     />
                 ))}

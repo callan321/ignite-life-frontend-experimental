@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 type UserTableRowProps = User & {
     editHref: string;
 };
-export default function UserTableRow({id, name, phone_number, email, editHref}: UserTableRowProps) {
+export default function UserTableRow({name, phone_number, email, subscribed, editHref}: UserTableRowProps) {
     return (
         <tr key={email}>
             <td className="w-full max-w-0 py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:w-auto sm:max-w-none sm:pl-0">
@@ -18,7 +18,13 @@ export default function UserTableRow({id, name, phone_number, email, editHref}: 
             </td>
             <td className="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell">{phone_number}</td>
             <td className="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{email}</td>
-            <td className="px-3 py-4 text-sm text-gray-500">{id}</td>
+            <td className="px-3 py-0 text-gray-950 font-normal">
+
+                    <span className={`px-2 rounded ${subscribed ? "bg-green-300 " : "bg-red-300"}`}>
+                    {subscribed ? "yes" : "no"}
+                    </span>
+
+            </td>
             <td className="py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
                 <Link to={editHref} className="text-indigo-600 hover:text-indigo-900">
                     Edit<span className="sr-only">, {name}</span>

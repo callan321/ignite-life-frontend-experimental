@@ -9,7 +9,7 @@ export default function AdminUsers() {
     const [users, setUsers] = useState<User[]>([]);
 
     useEffect(() => {
-        axios.get("http://ignite-life-backend.test/api/users")
+        axios.get("http://ignite-life-backend.test/api/userss")
             .then(response => setUsers(response.data))
             .catch(error => {
                 console.log(error);
