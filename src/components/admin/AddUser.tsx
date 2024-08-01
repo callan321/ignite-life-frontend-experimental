@@ -85,7 +85,7 @@ export default function AddUser() {
                                             Subscribed?
                                         </label>
                                         <div className="mt-2">
-                                            <Toggle/>
+                                            <Toggle start={false}/>
                                         </div>
                                     </div>
                                     <div className="sm:col-span-6 flex justify-between ">
