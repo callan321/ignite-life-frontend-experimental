@@ -13,7 +13,11 @@ export default function AdminLayout() {
     return (
         <div>
             <NavBar items={NavBarProps}/>
-            <Outlet/>
+            <div className=" flex justify-center">
+                <div className="w-[48rem] p-8">
+                    <Outlet/>
+                </div>
+            </div>
         </div>
     )
 }
