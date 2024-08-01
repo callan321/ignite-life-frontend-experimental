@@ -8,7 +8,37 @@ The current site is operating in a front-end only mode, displaying minimal place
 
 ### Backend Repository
 
-The backend code is available at: [Ignite Life Backend](https://github.com/callan321/ignite-life-backend)
+The backend code is available at: [https://github.com/callan321/ignite-life-backed](https://github.com/callan321/ignite-life-backed)
+
+## Requirements
+
+### Main Page
+- [x]  Layout and Page with Navbar
+
+### Admin 
+
+#### Dashboard
+- [ ] Links to socials 
+
+#### User 
+- [x] List view for users, name, email, phone number
+- [x] Sync With Backend
+- [x] Add user
+- [x] Edit User
+- [ ] Delete user
+- [ ] Pagination
+- [ ] Search for user
+- [ ] Link user information (additional table)
+- [ ] Add a view to users appointments
+- [ ] Add appointments
+- [ ] Edit appointments
+- [ ] Delete appointments
+
+#### Calender view
+- [ ] weekly view
+- [ ] Appointment details including user
+- [ ] Sync with backend
+- [ ] Link to user profile when clicked
 
 ## Getting Started
 
@@ -23,32 +53,4 @@ then, run the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-
-## Requirements
-
-### Home Page
-- [ ]  Add a hero section
-- [x]  Layout and Page with Navbar
-
-### Admin Panel
-- [x] List view for users, name, email, phone number
-- [x] Sync With Backend
-- [ ] Add user
-- [ ] Edit User
-- [ ] Delete user
-- [ ] Pagination
-- [ ] Search for user
-- [ ] Link user information (additional table)
-- [ ] Add a view to users appointments
-- [ ] Add appointments
-- [ ] Edit appointments
-- [ ] Delete appointments
-
-
-### Calender view
-- [ ] weekly view
-- [ ] Appointment details including user
-- [ ] Sync with backend
-- [ ] Link to user profile when clicked
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
