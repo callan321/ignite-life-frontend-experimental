@@ -1,10 +1,10 @@
 import {useState} from 'react'
 import {Dialog, DialogBackdrop, DialogPanel} from '@headlessui/react'
 import AdminButton from "./AdminButton.tsx"
+import Toggle from "./Toggle.tsx";
 
 export default function AddUser() {
     const [open, setOpen] = useState(false) // Initialize to false to prevent default rendering
-
 
 
     return (
@@ -77,6 +77,15 @@ export default function AddUser() {
                                                 autoComplete="email"
                                                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                             />
+                                        </div>
+                                    </div>
+                                    <div className="sm:col-span-2 ">
+                                        <label htmlFor="subscribed"
+                                               className="block text-sm font-medium leading-6 text-gray-900">
+                                            Subscribed?
+                                        </label>
+                                        <div className="mt-2">
+                                            <Toggle/>
                                         </div>
                                     </div>
                                     <div className="sm:col-span-6 flex justify-between ">

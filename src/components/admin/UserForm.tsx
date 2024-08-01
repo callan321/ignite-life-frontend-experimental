@@ -1,6 +1,7 @@
 import {User} from "../../models/types.ts";
 import {useNavigate} from "react-router-dom";
 import {FormEvent} from "react";
+import Toggle from "./Toggle.tsx";
 
 type UserTableProps = {
     user: User
@@ -63,6 +64,14 @@ export default function UserForm({user}: UserTableProps) {
                                 defaultValue={user.email}
                                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             />
+                        </div>
+                    </div>
+                    <div className="sm:col-span-2 ">
+                        <label htmlFor="subscribed" className="block text-sm font-medium leading-6 text-gray-900">
+                            Subscribed?
+                        </label>
+                        <div className="mt-2">
+                            <Toggle start={user.subscribed}/>
                         </div>
                     </div>
                 </div>
